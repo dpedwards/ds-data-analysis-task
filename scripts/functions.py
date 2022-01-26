@@ -25,7 +25,7 @@ def get_line_equation(p1, p2):
     return  m, b
 
 # Removing the outliers
-def removeOutliers(data, col):
+def remove_outliers(data, col):
       for x in col:
         q75,q25 = np.percentile(data.loc[:,x],[75,25])
         intr_qr = q75-q25
